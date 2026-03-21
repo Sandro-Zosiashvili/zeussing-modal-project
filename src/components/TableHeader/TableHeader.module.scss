@@ -2,12 +2,13 @@
   max-width: 1422px;
   width: 100%;
   height: 48px;
-  border-radius: 6px;
   padding: 0 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+  border-bottom: 3px solid #4B4D59;
+
 }
 
 .button {
@@ -15,4 +16,11 @@
   min-width: 144px;
   height: 24px;
   margin-left: 48px;
+}
+
+.tabItemTwo {
+  cursor: pointer !important;
+  margin-bottom: -3px !important;
+  border-bottom: 3px solid #1EAFED !important;
+
 }

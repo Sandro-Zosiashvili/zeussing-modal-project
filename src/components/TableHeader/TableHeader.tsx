@@ -1,3 +1,4 @@
+"use client"
 import styles from "./TableHeader.module.scss"
 import Checkbox from "@/components/CheckBox/CheckBox";
 import TabBarItem from "@/components/TabBarItem/TabBarItem";
@@ -14,13 +15,14 @@ interface TabBarProps {
 
 
 const TableHeader = (props: TabBarProps) => {
+    const [activeTab, setActiveTab] = useState<number>();
 
     return (
         <div className={`${styles.container} ${props.className || ""}`}>
             <PlusMinusCheckbox
                 onChange={(val) => props.onChange?.(val)}
                 checked={props.checked}/>
-            <TabBarItem/>
+            <TabBarItem  forHeader={true}/>
             <Button className={styles.button} text={"Button"} isActive={false}/>
         </div>
     )
