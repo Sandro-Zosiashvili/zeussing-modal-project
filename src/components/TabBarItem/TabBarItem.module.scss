@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  gap: 12px;
+  max-width: 816px;
+  width: 100%;
+}
+
+.tabsItem {
+  padding-left: 6px;
+  max-width: 126px;
+  min-width: 96px;
+  height: 48px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #23242A;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 100%;
+
+}

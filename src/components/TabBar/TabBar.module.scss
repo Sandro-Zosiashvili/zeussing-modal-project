@@ -1,0 +1,18 @@
+.container {
+  max-width: 1104px;
+  height: 48px;
+  box-shadow: -2px -2px 6px 1px rgba(0, 0, 0, 4%), 2px 2px 6px 1px rgba(0, 0, 0, 4%);
+  border-radius: 6px;
+  padding: 0 12px;
+  margin-top: 200px;
+  margin-left: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  max-width: 144px;
+  height: 24px;
+  margin-left: 48px;
+}

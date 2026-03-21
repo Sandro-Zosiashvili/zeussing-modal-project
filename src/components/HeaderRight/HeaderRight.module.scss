@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  gap: 60px;
+}
+.toggleLayout {
+  display: flex;
+  gap: 120px;
+}
+.button {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+}

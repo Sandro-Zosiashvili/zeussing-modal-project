@@ -1,5 +1,79 @@
-
 .container {
   padding: 6px;
-  background-color: #1EAFED;
+  line-height: 100%;
+  background-color: #E9F7FD;
+  font-family: var(--font-montserrat);
+  color: #1EAFED;
+  border-radius: 22px;
+  font-weight: 500;
+  font-size: 12px;
+  height: 36px;
+  border: 1px solid #1EAFED;
+  max-width: 240px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-color 0.35s ease-in-out;
+  box-shadow: -4px 0px 12px 0px rgba(0, 0, 0, 3%), 4px 0px 12px 0px rgba(0, 0, 0, 3%), 0px 4px 12px 0px rgba(0, 0, 0, 3%), 0px -4px 12px 0px rgba(0, 0, 0, 3%);
 }
+
+.container:hover {
+  background-color: #1EAFED;
+  border-color: #1EAFED;
+  box-shadow: 0px 6px 20px 0px rgba(30, 175, 237, 0.35);
+  color: white;
+
+}
+
+.container:active {
+  background-color: rgba(30, 175, 237, 0.54);
+  border-color: #94d4f5;
+  box-shadow: 0px 2px 8px 0px rgba(30, 175, 237, 0.25);
+  color: white;
+  transform: translateY(1px);
+  transition: none;
+
+}
+
+
+.unActiveContainer {
+  padding: 6px;
+  line-height: 100%;
+  background-color: #FFFFFF;
+  font-family: var(--font-montserrat);
+  color: #23242A;
+  border-radius: 22px;
+  font-weight: 500;
+  font-size: 12px;
+  height: 36px;
+  max-width: 240px;
+  border: 1px solid #FFFFFF;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-color 0.35s ease-in-out;
+
+  box-shadow: -4px 0px 12px 0px rgba(0, 0, 0, 3%), 4px 0px 12px 0px rgba(0, 0, 0, 3%), 0px 4px 12px 0px rgba(0, 0, 0, 3%), 0px -4px 12px 0px rgba(0, 0, 0, 3%);
+}
+
+.unActiveContainer:hover {
+  background-color: #1EAFED;
+  border-color: #1EAFED;
+  box-shadow: 0px 6px 20px 0px rgba(30, 175, 237, 0.35);
+  color: white;
+}
+
+.unActiveContainer:active {
+  background-color: rgba(30, 175, 237, 0.54);
+  border-color: #94d4f5;
+  box-shadow: 0px 2px 8px 0px rgba(30, 175, 237, 0.25);
+  color: white;
+  transform: translateY(1px);
+  transition: none;
+}
+.unActiveContainer img {
+  transition: filter 0.35s ease-in-out;
+}
+
+.unActiveContainer:hover img {
+  filter: brightness(0) invert(1);
+}
+

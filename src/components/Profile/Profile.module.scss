@@ -1,0 +1,24 @@
+.container  {
+  display: flex;
+  gap: 6px;
+
+}
+.headerName {
+  color: #1783B2;
+  font-weight: 600;
+  line-height: 100%;
+}
+.explanation {
+  color: #646677;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+}
+.profileContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.img {
+  margin-top: -2px;
+}
