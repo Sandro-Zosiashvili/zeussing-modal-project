@@ -4,19 +4,19 @@ import Button from "@/components/Button/Button";
 import Checkbox from "@/components/CheckBox/CheckBox";
 
 
-
 interface TabBarProps {
     checked: boolean;
+    className?: string;
 }
 
 
 const TabBar = (props: TabBarProps) => {
 
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} ${props.className || ""}`}>
             <Checkbox checked={props.checked}/>
-            <TabBarItem  />
-            <Button  className={styles.button} text={"Button"}  isActive={false} />
+            <TabBarItem/>
+            <Button className={styles.button} text={"Button"} isActive={false}/>
         </div>
     )
 }

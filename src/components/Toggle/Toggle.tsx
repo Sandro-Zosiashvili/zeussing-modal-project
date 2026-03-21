@@ -1,6 +1,6 @@
 "use client";
 
-import {AnimatePresence, motion} from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import styles from "./Toggle.module.scss";
 
@@ -24,6 +24,10 @@ export default function Toggle({ defaultOn = true, onChange }: ToggleProps) {
             onClick={handleClick}
             aria-checked={isOn}
             role="switch"
+            initial={{
+                backgroundColor: isOn ? "#E9F7FD" : "#f0f0f0",
+                borderColor: isOn ? "#1EAFED" : "#d0d0d0",
+            }}
             animate={{
                 backgroundColor: isOn ? "#E9F7FD" : "#f0f0f0",
                 borderColor: isOn ? "#1EAFED" : "#d0d0d0",
@@ -32,13 +36,18 @@ export default function Toggle({ defaultOn = true, onChange }: ToggleProps) {
         >
             <motion.div
                 className={styles.thumb}
+                initial={{
+                    x: isOn ? 0 : 49,
+                    backgroundColor: isOn ? "#1EAFED" : "#b0b0b0",
+                }}
                 animate={{
                     x: isOn ? 0 : 49,
                     backgroundColor: isOn ? "#1EAFED" : "#b0b0b0",
                 }}
                 transition={{ type: "spring", stiffness: 500, damping: 35 }}
             />
-            <AnimatePresence mode="wait">
+
+            <AnimatePresence mode="wait" initial={false}>
                 <motion.span
                     key={isOn ? "on" : "off"}
                     className={styles.label}
