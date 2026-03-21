@@ -5,14 +5,16 @@ import Checkbox from "@/components/CheckBox/CheckBox";
 
 
 
+interface TabBarProps {
+    checked: boolean;
+}
 
 
-
-const TabBar = () => {
+const TabBar = (props: TabBarProps) => {
 
     return (
         <div className={styles.container}>
-            <Checkbox checked={true}/>
+            <Checkbox checked={props.checked}/>
             <TabBarItem  />
             <Button  className={styles.button} text={"Button"}  isActive={false} />
         </div>

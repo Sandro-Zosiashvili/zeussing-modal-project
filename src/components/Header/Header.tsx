@@ -11,9 +11,10 @@ const Header = () => {
 
     return (
         <div className={styles.container}>
-            <Profile />
-
-            <HeaderRight  />
+            <div className={styles.layout}>
+                <Profile />
+                <HeaderRight  />
+            </div>
         </div>
     )
 }
