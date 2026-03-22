@@ -36,7 +36,6 @@ const MainModal = (props: Props) => {
                     />
                 )}
             </AnimatePresence>
-
             <Footer/>
         </div>
     )

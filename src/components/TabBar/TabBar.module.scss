@@ -11,12 +11,13 @@
   margin: 0 auto;
   border: 1px solid transparent;
   transition: border-color 0.35s ease-in-out;
+  background-color: white;
+
 
 }
 
 .container:hover {
   border-color: #1EAFED;
-
 }
 
 .button {

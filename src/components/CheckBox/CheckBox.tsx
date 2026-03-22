@@ -1,20 +1,19 @@
+// Checkbox.tsx
 "use client";
-
 import styles from "./Checkbox.module.scss";
-import {useState} from "react";
+import { useState, useEffect } from "react";
+import { useGlobalStore } from "@/GlobalStates/useGlobalStore";
 
-interface CheckboxProps {
-    checked?: boolean;
-    onChange?: (val: boolean) => void;
-}
-
-export default function Checkbox({ checked = false, onChange }: CheckboxProps) {
-    const [isChecked, setIsChecked] = useState(checked);
+export default function Checkbox() {
+    const allChecked = useGlobalStore((state) => state.allChecked);
+    const [isChecked, setIsChecked] = useState(allChecked);
+    useEffect(() => {
+        setIsChecked(allChecked);
+    }, [allChecked]);
 
     const handleClick = () => {
         const next = !isChecked;
         setIsChecked(next);
-        onChange?.(next);
     };
 
     return (

@@ -14,7 +14,7 @@ const TabBar = (props: TabBarProps) => {
 
     return (
         <div className={`${styles.container} ${props.className || ""}`}>
-            <Checkbox checked={props.checked}/>
+            <Checkbox />
             <TabBarItem forHeader={false}/>
             <Button className={styles.button} text={"Button"} isActive={false}/>
         </div>

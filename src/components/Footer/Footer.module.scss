@@ -1,6 +1,7 @@
 // Footer.module.scss
 .container {
   min-height: 84px;
+  max-height: 84px;
   background-color: white;
   box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.06);
   position: fixed;
@@ -13,5 +14,6 @@
   align-items: center;
   justify-content: center;
   gap: 36px;
-  z-index: 100; // ✅ დაამატე
+  z-index: 100;
 }
+

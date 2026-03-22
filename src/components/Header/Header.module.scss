@@ -12,6 +12,7 @@
   z-index: 999;
 
 
+
 }
 .layout {
   max-width: 1422px;
@@ -30,4 +31,10 @@
     flex-direction: column;
     gap: 20px;
   }
+
+  .container {
+    border-radius: unset;
+  }
 }
+
+
