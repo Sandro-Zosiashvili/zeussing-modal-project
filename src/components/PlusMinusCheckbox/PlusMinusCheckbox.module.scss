@@ -1,11 +1,9 @@
 .box {
-  /* ✦ ზომა */
   min-width: 24px;
   max-width: 24px;
   min-height: 24px;
   max-height: 24px;
 
-  /* ✦ ბორდერი */
   border-radius: 6px;
   border: 0.3px solid #646677;
 
@@ -23,13 +21,11 @@
     transition: transform 0.2s ease;
   }
 
-  /* ✦ hover ფერი */
   &:hover {
     border-color: #16DB2A;
     background-color: #E8FBEA;
   }
 
-  /* ✦ checked — plus მდგომარეობა */
   &.checked {
     border-color: #646677;
 

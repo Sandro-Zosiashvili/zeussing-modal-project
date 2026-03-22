@@ -8,6 +8,8 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   font-family: var(--font-montserrat);
+  scrollbar-width: none; // ✅ Firefox
+  -ms-overflow-style: none;
 
 }
 

@@ -1,4 +1,3 @@
-// MainModal.tsx
 "use client"
 import styles from './MainModal.module.scss'
 import Header from "@/components/Header/Header";

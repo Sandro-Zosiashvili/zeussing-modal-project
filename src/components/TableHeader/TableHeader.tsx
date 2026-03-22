@@ -18,9 +18,7 @@ const TableHeader = (props: TabBarProps) => {
 
     return (
         <div className={`${styles.container} ${props.className || ""}`}>
-            <PlusMinusCheckbox
-                onChange={(val) => props.onChange?.(val)}
-                checked={props.checked}/>
+            <PlusMinusCheckbox />
             <TabBarItem  forHeader={true}/>
             <Button className={styles.button} text={"Button"} isActive={false}/>
         </div>

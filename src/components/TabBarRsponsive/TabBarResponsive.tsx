@@ -2,7 +2,6 @@ import TabBarItem from "@/components/TabBarItem/TabBarItem";
 import Button from "@/components/Button/Button";
 import Checkbox from "@/components/CheckBox/CheckBox";
 import styles from './TabBarResponsive.module.scss'
-import {useState} from "react";
 
 
 interface TabBarProps {

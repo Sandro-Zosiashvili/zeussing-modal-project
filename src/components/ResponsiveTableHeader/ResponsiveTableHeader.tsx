@@ -1,6 +1,6 @@
 "use client"
+import { motion } from "framer-motion";
 import styles from './ResponsiveTableHeader.module.scss'
-import Checkbox from "@/components/CheckBox/CheckBox";
 import TabBarItem from "@/components/TabBarItem/TabBarItem";
 import Button from "@/components/Button/Button";
 import PlusMinusCheckbox from "@/components/PlusMinusCheckbox/PlusMinusCheckbox";
@@ -12,19 +12,27 @@ interface TabBarProps {
     onTabClick?: () => void;
 }
 
-
 const ResponsiveTableHeader = (props: TabBarProps) => {
-
     return (
-        <div className={`${styles.container} ${props.className || ""}`}>
-            <PlusMinusCheckbox
-                onChange={(val) => props.onChange?.(val)}
-                checked={props.checked}/>
-            <TabBarItem onTabClick={props.onTabClick}   className={styles.barITem} forHeader={true}/>
+        <motion.div
+            className={`${styles.container} ${props.className || ""}`}
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+                duration: 0.5,
+                ease: [0.22, 1, 0.36, 1],
+                delay: 0.7
+            }}
+        >
+            <PlusMinusCheckbox />
+            <TabBarItem
+                onTabClick={props.onTabClick}
+                className={styles.barITem}
+                forHeader={true}
+            />
             <Button className={styles.button} text={"Button"} isActive={false}/>
-        </div>
+        </motion.div>
     )
 }
-
 
 export default ResponsiveTableHeader;

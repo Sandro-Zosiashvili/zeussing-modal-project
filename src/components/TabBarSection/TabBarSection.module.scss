@@ -12,8 +12,6 @@
 }
 
 
-
-
 @media (max-width: 975px) {
   .container {
     margin-right: 0;
@@ -23,6 +21,12 @@
     margin-bottom: 101px;
     height: auto;
   }
+}
+
+@media (max-width: 565px) {
+  .container {
+    margin-bottom: 182px;
+  }
 
 
   ::-webkit-scrollbar {
@@ -31,7 +35,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #f0f0f0;
+    background: white;
     border-radius: 6px;
   }
 
@@ -44,11 +48,5 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background: #0e8fc9;
-  }
-}
-
-@media (max-width: 565px) {
-  .container {
-    margin-bottom: 182px;
   }
 }

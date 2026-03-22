@@ -1,6 +1,6 @@
-// ProfileModal.tsx
 "use client"
 import { motion, AnimatePresence } from "framer-motion";
+import { useRef, useEffect } from "react";
 import styles from "./ProfileModal.module.scss";
 import Button from "@/components/Button/Button";
 
@@ -10,27 +10,58 @@ interface ProfileModalProps {
 }
 
 const ProfileModal = ({ isOpen, onClose }: ProfileModalProps) => {
+    const wrapperRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const wasFixed = document.body.style.position === "fixed";
+
+        if (!wasFixed) {
+            const scrollY = window.scrollY;
+            document.body.style.position = "fixed";
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.width = "100%";
+            document.body.style.overflowY = "scroll";
+        }
+
+        function handleClickOutside(event: MouseEvent) {
+            if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
+                onClose();
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            if (!wasFixed) {
+                const savedScrollY = document.body.style.top;
+                document.body.style.position = "";
+                document.body.style.top = "";
+                document.body.style.width = "";
+                document.body.style.overflowY = "";
+                if (savedScrollY) {
+                    window.scrollTo(0, Math.abs(parseInt(savedScrollY)));
+                }
+            }
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [onClose]);
+
     return (
         <AnimatePresence>
             {isOpen && (
-                <>
-                    {/* Overlay */}
-                    <motion.div
-                        className={styles.overlay}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        onClick={onClose}
-                    />
-
-                    {/* Modal */}
+                <motion.div
+                    className={styles.overlay}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                >
                     <motion.div
                         className={styles.modal}
+                        ref={wrapperRef}
                         initial={{ opacity: 0, scale: 0.9, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ type: "spring", stiffness: 300, damping: 25 }}
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className={styles.header}>
@@ -47,7 +78,7 @@ const ProfileModal = ({ isOpen, onClose }: ProfileModalProps) => {
                         <div className={styles.content}>
                             <div className={styles.avatarSection}>
                                 <img
-                                    src="./assets/icons/AddressBookTabs.svg"
+                                    src="./assets/icons/profile.avif"
                                     width={80}
                                     height={80}
                                     alt="Profile"
@@ -79,7 +110,7 @@ const ProfileModal = ({ isOpen, onClose }: ProfileModalProps) => {
                             <Button text="Save Changes" isActive={true} />
                         </div>
                     </motion.div>
-                </>
+                </motion.div>
             )}
         </AnimatePresence>
     );

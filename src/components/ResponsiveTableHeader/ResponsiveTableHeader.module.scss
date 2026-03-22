@@ -25,8 +25,9 @@
     border-radius: 12px;
     top: 147px;
     bottom: 101px;
-    left: 0;
+    min-height: auto;
     height: auto;
+    left: 0;
     padding: 14px 6px;
     width: fit-content;
     flex-direction: column;
@@ -38,6 +39,8 @@
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
+    height: 80% !important;
+
   }
   .button {
     justify-self: center;

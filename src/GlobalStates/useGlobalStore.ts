@@ -10,6 +10,6 @@ interface GlobalStore {
 export const useGlobalStore = create<GlobalStore>((set) => ({
     isOpen: false,
     setIsOpen: (value) => set({ isOpen: value }),
-    allChecked: true, // ✅ true - პირველი მონიშნული
+    allChecked: true,
     setAllChecked: (value) => set({ allChecked: value }),
 }));
