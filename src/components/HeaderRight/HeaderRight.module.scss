@@ -13,3 +13,36 @@
   height: 34px !important;
   border-radius: 6px !important;
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .container {
+    gap: 24px;
+  }
+
+  .toggleLayout {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: 100%;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  .toggleLayout {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    gap: 8px;
+  }
+
+  .toggleLayout {
+    gap: 8px;
+  }
+}

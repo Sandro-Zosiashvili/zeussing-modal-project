@@ -77,3 +77,30 @@
   filter: brightness(0) invert(1);
 }
 
+/* responsive */
+@media (max-width: 760px) {
+  .container,
+  .unActiveContainer {
+    max-width: 180px;
+    height: 34px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 440px) {
+  .container,
+  .unActiveContainer {
+    max-width: 148px;
+    height: 32px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container,
+  .unActiveContainer {
+    max-width: 132px;
+    height: 30px;
+    font-size: 10px;
+  }
+}

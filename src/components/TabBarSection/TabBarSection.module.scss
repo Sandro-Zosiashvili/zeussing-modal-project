@@ -8,3 +8,35 @@
   flex-direction: column;
   gap: 12px;
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .container {
+    margin-top: 136px;
+    gap: 10px;
+    height: calc(100vh - 220px);
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    margin-top: 128px;
+    gap: 8px;
+    height: calc(100vh - 204px);
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    margin-top: 118px;
+    gap: 6px;
+    height: calc(100vh - 188px);
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    margin-top: 114px;
+    height: calc(100vh - 182px);
+  }
+}

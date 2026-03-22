@@ -2,3 +2,22 @@
   height: 100vh;
   margin: 0 12px;
 }
+
+/* responsive */
+@media (max-width: 760px) {
+  .page {
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 440px) {
+  .page {
+    margin: 0 6px;
+  }
+}
+
+@media (max-width: 375px) {
+  .page {
+    margin: 0 4px;
+  }
+}
