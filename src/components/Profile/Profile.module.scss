@@ -22,3 +22,22 @@
 .img {
   margin-top: -2px;
 }
+
+.button {
+  display: none;
+}
+
+
+@media (max-width: 610px) {
+  .button {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 6px !important;
+    display: block !important;
+  }
+  .layoutFlex {
+    display: flex !important;
+    width: 100%;
+    justify-content: space-between;
+  }
+}

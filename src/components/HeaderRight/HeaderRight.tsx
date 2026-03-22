@@ -3,9 +3,11 @@ import Toggle from "@/components/Toggle/Toggle";
 import Button from "@/components/Button/Button";
 
 
+interface Props {
+    RightOnClick?: () => void;
+}
 
-
-const HeaderRight = () => {
+const HeaderRight = (props: Props) => {
 
 
     return (
@@ -14,7 +16,7 @@ const HeaderRight = () => {
                 <Toggle   />
                 <Toggle   />
             </div>
-            <Button  className={styles.button} icon={"close"}  iconButton={true}   />
+            <Button onClick={props.RightOnClick}  className={styles.button} icon={"close"}  iconButton={true}   />
 
         </div>
     )

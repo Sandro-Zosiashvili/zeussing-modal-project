@@ -24,3 +24,10 @@
   border-bottom: 3px solid #1EAFED !important;
 
 }
+
+
+@media (max-width: 975px) {
+  .container {
+    display: none;
+  }
+}

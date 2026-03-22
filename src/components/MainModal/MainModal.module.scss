@@ -7,23 +7,3 @@
   padding: 0 12px;
 
 }
-
-
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f0f0f0;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1EAFED;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #0e8fc9;
-}

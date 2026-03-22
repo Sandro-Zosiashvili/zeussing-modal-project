@@ -38,3 +38,11 @@
     }
   }
 }
+
+@media (max-width: 975px) {
+  .box {
+    max-width: 144px;
+    min-width: 144px;
+    height: 24px;
+  }
+}

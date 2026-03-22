@@ -25,3 +25,9 @@
   height: 24px !important;
   margin-left: 48px !important;
 }
+
+@media (max-width: 975px) {
+  .container {
+    display: none;
+  }
+}

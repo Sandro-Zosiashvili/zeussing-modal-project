@@ -9,7 +9,7 @@
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   padding: 24px 24px 0 24px;
-  z-index: 999999;
+  z-index: 999;
 
 
 }
@@ -22,4 +22,12 @@
 }
 .tableHeader {
   margin-top: 24px !important;
+}
+
+
+@media (max-width: 610px) {
+  .layout {
+    flex-direction: column;
+    gap: 20px;
+  }
 }

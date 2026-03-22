@@ -9,6 +9,7 @@ interface ButtonProps {
     iconWidth?: number
     iconHeight?: number
     className?: string
+    onClick?: () => void
 }
 
 
@@ -16,6 +17,11 @@ const Button = (props: ButtonProps) => {
     if (props.iconButton) {
         return (
             <button
+                onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    props.onClick?.();
+                }}
                 className={`${props.isActive ? styles.container : styles.unActiveContainer} ${props.className || ""}`}>
                 <img src={`./assets/icons/${props.icon}.svg`}
                      width={props.iconWidth} height={props.iconHeight}
