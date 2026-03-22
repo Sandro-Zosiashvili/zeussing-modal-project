@@ -22,3 +22,30 @@
 .img {
   margin-top: -2px;
 }
+
+/* responsive */
+@media (max-width: 760px) {
+  .headerName {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 440px) {
+  .headerName {
+    font-size: 13px;
+  }
+
+  .explanation {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    gap: 4px;
+  }
+
+  .headerName {
+    font-size: 12px;
+  }
+}

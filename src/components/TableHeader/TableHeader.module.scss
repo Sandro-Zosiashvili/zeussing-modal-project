@@ -24,3 +24,50 @@
   border-bottom: 3px solid #1EAFED !important;
 
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 8px;
+  }
+
+  .button {
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    gap: 8px;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 6px 8px;
+    justify-content: flex-start;
+  }
+
+  .button {
+    min-width: 120px;
+    max-width: 120px;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .button {
+    min-width: 108px;
+    max-width: 108px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .button {
+    min-width: 100px;
+    max-width: 100px;
+  }
+}

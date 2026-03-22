@@ -43,3 +43,49 @@
   border-bottom: 3px solid #1EAFED;
   color: #1EAFED;
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .container {
+    margin-left: 12px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    margin-left: 0;
+    gap: 4px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tabsItem,
+  .tabsItemTwo {
+    min-width: 86px;
+    max-width: 104px;
+    height: 40px;
+    font-size: 11px;
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 440px) {
+  .tabsItem,
+  .tabsItemTwo {
+    min-width: 74px;
+    max-width: 94px;
+    height: 36px;
+    font-size: 10px;
+    padding-left: 4px;
+  }
+}
+
+@media (max-width: 375px) {
+  .tabsItem,
+  .tabsItemTwo {
+    min-width: 68px;
+    max-width: 88px;
+  }
+}

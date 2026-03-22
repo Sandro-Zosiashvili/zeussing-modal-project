@@ -25,3 +25,50 @@
   height: 24px !important;
   margin-left: 48px !important;
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 8px;
+  }
+
+  .button {
+    margin-left: 16px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    gap: 8px;
+    height: auto;
+    padding: 6px 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .button {
+    min-width: 120px !important;
+    max-width: 120px !important;
+    margin-left: auto !important;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .button {
+    min-width: 108px !important;
+    max-width: 108px !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .button {
+    min-width: 100px !important;
+    max-width: 100px !important;
+  }
+}

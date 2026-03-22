@@ -14,3 +14,34 @@
   justify-content: center;
   gap: 36px;
 }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .container {
+    min-height: 80px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    min-height: 72px;
+    gap: 12px;
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    min-height: 68px;
+    gap: 8px;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    min-height: 64px;
+    padding: 0 6px;
+  }
+}

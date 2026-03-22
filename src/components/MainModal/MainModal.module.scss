@@ -5,6 +5,7 @@
   height: 100vh;
   font-family: var(--font-montserrat);
   padding: 0 12px;
+  overflow-y: auto;
 
 }
 
@@ -26,4 +27,29 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #0e8fc9;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    padding: 0 6px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 0 4px;
+  }
 }
