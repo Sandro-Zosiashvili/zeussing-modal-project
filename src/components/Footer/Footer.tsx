@@ -12,8 +12,8 @@ const Footer = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.5}}
         >
-            <Button text={"Button"} isActive={true} />
-            <Button text={"Button"} isActive={false} />
+            <Button className={styles.Button} text={"Button"} isActive={true} />
+            <Button className={styles.Button} text={"Button"} isActive={false} />
         </motion.div>
     )
 }
