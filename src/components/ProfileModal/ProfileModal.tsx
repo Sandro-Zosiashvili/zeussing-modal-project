@@ -67,6 +67,7 @@ const ProfileModal = ({ isOpen, onClose }: ProfileModalProps) => {
                         <div className={styles.header}>
                             <h2>Profile Settings</h2>
                             <Button
+                                className={styles.button}
                                 onClick={onClose}
                                 icon="close"
                                 iconButton={true}
