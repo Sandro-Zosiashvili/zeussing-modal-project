@@ -24,8 +24,7 @@ export default function Home() {
                             transition: { duration: 0.4 }
                         }}
                     >
-                        <MainModal onClick={() => {setIsOpen(false);}}
-                         />
+                        <MainModal onClick={() => {setIsOpen(false);}} />
                     </motion.div>
                 )}
             </AnimatePresence>
